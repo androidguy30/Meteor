@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/detail_padding"
+        android:layout_marginRight="@dimen/detail_padding"
+        android:background="@color/cardColor">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.10" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.90" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/backgroundColorDark"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="Title"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/like_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_likes"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/noLikes"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            android:text="227 Likes"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="@+id/like_icon"
+            app:layout_constraintRight_toRightOf="@+id/like_icon"
+            app:layout_constraintTop_toBottomOf="@+id/like_icon" />
+
+        <ImageView
+            android:id="@+id/views_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_views"
+            app:layout_constraintLeft_toRightOf="@+id/like_icon"
+            app:layout_constraintRight_toLeftOf="@+id/shareIcon"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/noViews"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            android:text="3401 VIEWS"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="@+id/views_icon"
+            app:layout_constraintRight_toRightOf="@+id/views_icon"
+            app:layout_constraintTop_toBottomOf="@+id/views_icon" />
+
+
+        <ImageView
+            android:id="@+id/shareIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_share"
+            app:layout_constraintRight_toLeftOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/shareText"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            android:text="Share"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="@+id/shareIcon"
+            app:layout_constraintRight_toRightOf="@+id/shareIcon"
+            app:layout_constraintTop_toBottomOf="@+id/shareIcon" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/description"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="48dp"
+            android:maxLines="6"
+            android:text="Description"
+            android:textColor="@android:color/white"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noViews" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatarImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            app:civ_border_color="@color/backgroundColor"
+            app:civ_border_width="1dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/authorName"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Loren Ipsum"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toRightOf="@+id/avatarImage"
+            app:layout_constraintTop_toTopOf="@+id/avatarImage" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/location"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mumbai"
+            android:textColor="@color/locationColor"
+            android:layout_marginTop="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/authorName"
+            app:layout_constraintLeft_toRightOf="@+id/avatarImage"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/avatarImage"
+            android:layout_marginBottom="8dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/commentList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/backgroundColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avatarImage" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

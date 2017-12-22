@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="backgroundColor">#303030</color>
+    <color name="backgroundColorDark">#262626</color>
+    <color name="cardColor">#424242</color>
+    <color name="commentTitleColor">#97ffffff</color>
+    <color name="commentContentColor">#47ffffff</color>
+    <color name="locationColor">#67ffffff</color>
+</resources>
