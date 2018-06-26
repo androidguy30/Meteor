@@ -27,7 +27,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by kausthubhadhikari on 11/11/17.
  */
 @Module
-public class AppModule {
+public class  AppModule {
 
     private AppController appController;
 
